@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span{
+    color: crimson;
+    font-size: 4rem;
+    font-weight: 300; 
+}
+
+/***************************************/
+#first{
+    display: block;
+    background-image: url(./bac.jfif);
+    height: 100vh; 
+    background-size: cover;
+    background-position: top center;
+    position: relative; 
+    z-index: 1;
+}
+
+#first::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#first .first{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content:flex-start;
+}
+
+#first h1{
+    width: fit-content;
+    font-size: 4rem;
+    color:transparent;
+    position: relative;
+    animation: text_hide .5s ease forwards;
+}
+
+#first h1:nth-child(1){
+    animation-delay: 1.5s;
+}
+
+#first h1:nth-child(2){
+    animation-delay: 2.5s;
+}
+
+#first h1:nth-child(3){
+    animation-delay: 3.5s;
+}
+
+#first h1 span{
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: crimson;
+    animation: text_block 1s ease ;
+}
+
+#first h1:nth-child(1) span{
+    animation-delay: 1s;
+}
+
+#first h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+
+#first h1:nth-child(3) span{
+    animation-delay: 3s;
+}
+
+#first .btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 2px solid crimson;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: 2rem;
+    margin-top: 30px;
+    transition: .3s ease ; 
+}
+
+#first .btn:hover{
+    background-color: crimson;
+}
+/*ability section***********************************************/
+
+#ability .ability{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    padding: 100px 0;
+    margin: 0 auto;
+}
+
+
+#ability .ability-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#ability .ability-item{
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+    margin: 10px 5%;
+    background-color: rgb(251, 255, 15);
+    border-radius:10px;
+    transform:scale(1,1);
+    transition: all 0.5s ease-out;
+}
+
+#ability .ability-item:nth-child(1){
+    background-color: darkorange;
+}
+
+#ability .ability-item:nth-child(2){
+    background-color:dodgerblue;
+}
+
+
+#ability .ability-item:hover{
+    transform:scale(1.1,1.1);
+}
+
+#ability .ability-item h1{
+    font-size: 2rem;
+    font-weight:bolder;
+    text-transform: uppercase;
+}
+
+#ability .ability-item ul{
+    margin-top: 1.5rem;
+}
+
+#ability .ability-item li{
+    list-style: none;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+/*project***********************************************/
+
+#projects .projects{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#projects .all-projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+.project-img{
+    width: 300px;
+    height: 300px;
+}
+.project-img img{
+    width: 300px;
+    height: 300px;
+}
+/***********************************************/
+@keyframes text_block {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_hide{
+    100%{
+        color: white;
+    }
+}
+
