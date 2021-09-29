@@ -279,6 +279,7 @@ p{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 80%;
 }
 
 #ability .ability-item{
@@ -546,6 +547,10 @@ p{
     }
 
     .section-title{
+        font-size: 7rem;
+    }
+
+    .section-title span{
         font-size: 7rem;
     }
 /*****************************************/
